@@ -7,6 +7,7 @@ header{
     width: 100%;
     position: fixed;
     top: 0px;
+    z-index: 60;
 }
 body{
     background-color: rgb(247, 243, 243);
