@@ -67,10 +67,14 @@ export default  function Header(){
     }
 
   
-     useEffect(()=>{
-        if(isbuy)
-           setTimeout(()=>{togglebuy(false)},3000) ;
-     },[isbuy])
+    useEffect(() => {
+        if (isbuy) {
+          setTimeout(() => {
+            togglebuy(false);
+          }, 3000);
+        }
+      }, [isbuy, togglebuy]);
+      
 
     return(
         <header>

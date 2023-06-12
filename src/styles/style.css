@@ -15,8 +15,7 @@ header div{
     width: 20%;
     display: flex;
     align-items: center;
-    justify-content: end;
-
+    justify-content: flex-end;
 }
 header nav{
     width: 70%;
@@ -150,14 +149,14 @@ header nav ul .Basket .Badge{
     width: 100%;
     height: 25%;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: space-between;
 }
 .product .infoClick div{
     width:75%;
     height: 100%;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -491,7 +490,7 @@ footer .info-footer .content{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start
 }
 footer .info-footer .content .lien{
        display: flex;
