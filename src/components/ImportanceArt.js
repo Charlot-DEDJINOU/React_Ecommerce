@@ -10,7 +10,7 @@ export default function ImportanceArt(){
             <div className="title">
                 <span></span><h1 style={{fontSize : "4vmin"}}>Why Art?</h1><span></span>
              </div>
-             <div className="container d-flex flex-wrap align-items-center justify-content-evenly py-25">
+             <div className="d-flex flex-wrap align-items-center justify-content-evenly py-25">
                 {importances}
              </div>
         </section>
