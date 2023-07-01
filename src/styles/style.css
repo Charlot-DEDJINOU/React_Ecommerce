@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 70px;
 }
 
 .welcome h1 {
@@ -295,6 +296,7 @@ table th {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 70px;
 }
 
 .form-control:focus,
@@ -332,6 +334,7 @@ form {
     background-color: rgb(247, 243, 243);
     display: flex;
     align-items: center;
+    margin-top: 70px;
 }
 
 .contact .contact-info {
@@ -473,6 +476,7 @@ footer p {
 
 .secour {
     min-height: 485px;
+    margin-top: 70px;
 }
 
 .BuyForm-form {
@@ -520,7 +524,8 @@ footer p {
 }
 
 .importanceArt {
-    width: 100%;
+    width: 80%;
+    margin: 0px auto;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
@@ -606,6 +611,9 @@ footer p {
     .detail {
         font-size: 3.5vw;
     }
+    contact .contact-info .form-reseau .texte {
+        font-size: 4vw;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -619,12 +627,12 @@ footer p {
     }
 
     .testomony .commentaire , .resize{
-        font-size: 3vw;
+        font-size: 2.5vw;
         text-align: center;
     }
 
     .contact .contact-info .form-reseau .texte{
-        font-size: 4vw;
+        font-size: 2.5vw;
     }
 
     footer p {
@@ -660,6 +668,10 @@ footer p {
 
     .importance p {
         font-size: 2vw;
+    }
+
+    .importanceArt {
+        width: 100%;
     }
 
     .contact .contact-info .form-reseau {

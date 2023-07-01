@@ -75,7 +75,7 @@ function BasicExample() {
     }, [isbuy, togglebuy]);
 
     return (
-        <Navbar expand="lg" className="bg-dark-tertiary p-0" style={{ backgroundColor: "rgb(6, 198, 6)" }}>
+        <Navbar expand="lg" className="bg-dark-tertiary p-0 fixed-top" style={{ backgroundColor: "rgb(6, 198, 6)" }}>
             <Container>
                 <Navbar.Brand>
                     <img src={logo} alt="" width="150px" height="60px" />
