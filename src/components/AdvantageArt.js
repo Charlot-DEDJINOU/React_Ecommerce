@@ -6,7 +6,7 @@ export default function AdvantageArt(props){
                     <h4>{props.name}</h4>
                     <i className="fa fa-quote-right" aria-hidden="true"></i>
                 </div>
-                <p>{props.texte}</p>
+                <p className="texte-small">{props.texte}</p>
         </div>
     )
 }

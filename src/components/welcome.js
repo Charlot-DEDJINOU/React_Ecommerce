@@ -1,8 +1,9 @@
-import { TypeAnimation } from "react-type-animation";
-import styled from "styled-components";
+import { useEffect , useRef} from "react";
 import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
+import Typewriter from 'typewriter-effect/dist/core';
 
-const Button=styled.button`
+const Button = styled.button`
 padding : 8px 15px ;
 background-color: rgb(6, 198, 6) ;
 color:white;
@@ -14,21 +15,48 @@ border :none ;
     border:1px solid white ;
 }
 `
-export default function Welcome(){
+export default function Welcome() {
 
-    const Navigate=useNavigate()
-    return(
-       <section className="welcome">
-            <h1>Welcome to Art Charlot</h1>
-                <div>
-                    <TypeAnimation
-                            sequence={['We present to you the paintings',200,'We present to you the imaginations',200,'We present to you the paintings, imaginations and the works of art',300,'Discover these works and you will not be disappointed',300,'Place your order and delivery will be made the same day',300,'Click on the green button at the bottom 👇 to discover the paintings',300]}
-                            wrapper="span"
-                            cursor={false}
-                            repeat={Infinity} />
-                </div>
-            <Button onClick={()=>{Navigate("/Products")}}><span className="shop">SHOP NOW</span></Button>
-         </section> 
+    const Navigate = useNavigate()
+
+    const typewriterRef = useRef(null);
+
+    useEffect(() => {
+        const typewriter = new Typewriter(typewriterRef.current, {
+            loop: true,
+            delay: 50,
+            deleteSpeed: 50,
+        });
+
+        typewriter
+            .typeString('We present to you the paintings')
+            .pauseFor(300)
+            .deleteAll()
+            .typeString('We present to you the imaginations')
+            .pauseFor(300)
+            .deleteAll()
+            .typeString('We present to you the paintings, imaginations and the works of art')
+            .pauseFor(300)
+            .deleteAll()
+            .typeString('Discover these works and you will not be disappointed')
+            .pauseFor(300)
+            .deleteAll()
+            .typeString('Click on the green button at the bottom 👇 to discover the paintings')
+            .pauseFor(300)
+            .deleteAll()
+            .start();
+
+        return () => {
+            typewriter.stop();
+        };
+    }, []);
+
+    return (
+        <section className="welcome">
+            <h1 >Welcome to Art Charlot</h1>
+            <div ref={typewriterRef} className="text-fit"></div>
+            <Button onClick={() => { Navigate("/Products") }}><span className="shop">SHOP NOW</span></Button>
+        </section>
     )
 }
 

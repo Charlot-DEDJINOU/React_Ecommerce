@@ -1,17 +1,13 @@
-import { UserContext } from "./ContextUser"
-import { useContext } from "react"
-
 export default function Static(){
-    const {nombre_visiteurs,nombre_artvendus}=useContext(UserContext)
 
     return(
-        <section className="Static">
+        <section className="Static d-flex flex-wrap align-items-center justify-content-evenly my-5">
             <div className="Static-item">
-                <p className="number">{nombre_visiteurs}</p>
+                <p className="number">1025</p>
                 <p className="texte">Nombre de visiteurs</p>
             </div>
             <div className="Static-item">
-                <p className="number">{nombre_artvendus}</p>
+                <p className="number">586</p>
                 <p className="texte">Nombre d'arts vendus</p>
             </div>
             <div className="Static-item">

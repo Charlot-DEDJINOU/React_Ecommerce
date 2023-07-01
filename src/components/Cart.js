@@ -35,7 +35,7 @@ export default function Cart(){
       var k=1
       var bodyelements=items.map(item=>{
         return(
-            <tr>
+            <tr key={k}>
                 <th scope="col">{k++}</th>
                 <td>{item.name}</td>
                 <td>{item.price+" $"}</td>
@@ -59,7 +59,7 @@ export default function Cart(){
      )
       return (
         <Body>
-             <table class="table" >
+             <table className="table" >
                      <thead style={{backgroundColor:'rgb(6,198,6)'}}>
                              <tr>
                                 <th scope="col">#</th>

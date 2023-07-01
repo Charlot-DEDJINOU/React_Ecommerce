@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 
 const Button=styled.button`
 padding : 5px 8px ;
+margin : 5px 0px ;
 background-color: rgb(6, 198, 6) ;
 color:white;
 font-weight:600 ;
@@ -17,7 +18,7 @@ border-radius:5px ;
 }
 `
 const products=Productdata().map(item=>{
-    return <Product {...item} />
+    return <Product {...item} key={item.id} />
 })
 
 export default function Products(){
@@ -34,13 +35,13 @@ export default function Products(){
        if(print[1]==="all"){
             var array=Productdata().filter((item)=>{return item.name.includes(texte)===true})
             newproducts=array.map(item=>{
-                return <Product {...item} />
+                return <Product {...item} key={item.id} />
             })
        }
        else{
             array=Productdata().filter((item)=>{return item.name.includes(texte)===true && item.categorie===print[1]})
              newproducts=array.map(item=>{
-                return <Product {...item} />
+                return <Product {...item} key={item.id} />
             })
        }
 
@@ -52,13 +53,13 @@ export default function Products(){
       document.getElementById(categorie).style.color="black"
        if(categorie==="all"){
           const  newproducts=Productdata().map(item=>{
-                return <Product {...item} />
+                return <Product {...item} key={item.id} />
             })
          Setprint([newproducts,"all"])
        }else{
             var array=Productdata().filter((item)=>{return item.categorie===categorie})
             const newproducts=array.map(item=>{
-                return <Product {...item} />
+                return <Product {...item} key={item.id} />
             })
          Setprint([newproducts,categorie])
         }  
@@ -73,7 +74,7 @@ export default function Products(){
                     Search
                     <input type="text" id="text" onChange={search}/>
                 </div>
-                <div className="categories">
+                <div className="d-flex flex-wrap justify-content-around">
                      <Button onClick={()=>refresh("all")} id="all" style={{color:"black"}}>All products</Button>
                      <Button onClick={()=>refresh("symbolique")} id="symbolique">Art symbolique</Button>
                      <Button onClick={()=>refresh("classique")} id="classique">Art classique</Button>

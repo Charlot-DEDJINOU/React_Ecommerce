@@ -22,19 +22,19 @@ export default function Home(){
 
    if(load)
         return(
-            <body>
+            <>
                 <Welcome />
                 <ImportanceArt />
                 <HomeProducts />
                 <Testomonies />
                 <Newsletter />
                 <Static />
-            </body> 
+            </> 
         )
         return(
             <section className="loading">
-                <div class="loadingio-spinner-spin-cqnwsirw4xu">
-                    <div class="ldio-f2b35q19ty">
+                <div className="loadingio-spinner-spin-cqnwsirw4xu">
+                    <div className="ldio-f2b35q19ty">
                             <div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div>
                     </div>
                 </div>

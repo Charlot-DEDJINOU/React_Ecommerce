@@ -45,13 +45,13 @@ export default function Product(props){
                         <img src={props.img} alt=""/>
                         <span><b>Name</b> : {props.name[0].toUpperCase()+props.name.slice(1)}</span>
                         <div className="infoaction">
-                            <sapn><b>Price </b>: {props.price+" $"}</sapn>
+                            <span><b>Price </b>: {props.price+" $"}</span>
                             <Badge bg="warning">{getItem(props.id)===undefined ? 0 : getItem(props.id).quantity}</Badge>
                         </div>
                         <div className="infoClick">
                             <Button onClick={()=>{
                             addItem(props)
-                            }} style={{backgroundColor:"rgb(6, 198, 6)",color:"white"}}>ADD </Button>
+                            }} style={{backgroundColor:"rgb(6, 198, 6)",color:"white"}}>ADD</Button>
                             <div>
                                 <span>{props.detail}</span>
                                 <I><i onClick={()=>Page(props.id)}>view more ...</i></I>

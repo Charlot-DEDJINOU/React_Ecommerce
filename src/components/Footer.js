@@ -12,7 +12,7 @@ const Linkfooter=styled(Link)`
 export default function Footer(){
     return(
         <footer>
-                <div class="info-footer">
+                <div className="info-footer">
                         <div className="content">
                               <h4>Coordonnées</h4>
                               <div className="lien">
@@ -46,7 +46,7 @@ export default function Footer(){
                               </div>
                         </div>
                 </div>
-                <p class="texte-footer">Copyright@2022 Allright reserved - art-Charlot</p>
+                <p className="texte-footer">Copyright@2022 Allright reserved - art-Charlot</p>
          </footer>
     )
 }

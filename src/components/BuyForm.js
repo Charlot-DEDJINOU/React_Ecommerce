@@ -39,11 +39,12 @@ export default function BuyForm(){
         getExpiryDateProps,
         getCVCProps
       } = usePaymentInputs();
+
     const { erroredInputs, touchedInputs } = meta;
    
-    const {handleCloseCheck,togglepage,togglebuy,toogleNombre_artvendus}=useContext(UserContext)
+    const {handleCloseCheck,togglepage,togglebuy}=useContext(UserContext)
 
-    const {cartTotal,emptyCart,totalItems}=useCart()
+    const {cartTotal,emptyCart}=useCart()
 
     const user=JSON.parse(localStorage.getItem('user'))
 
@@ -53,7 +54,6 @@ export default function BuyForm(){
             togglepage(false)
             togglebuy(true) 
             handleCloseCheck()
-            toogleNombre_artvendus(totalItems)
             emptyCart() 
         }
      }
@@ -68,7 +68,7 @@ export default function BuyForm(){
                              <Form.Label>First Name</Form.Label>
                              <Form.Control type="text" value={user.firstName}/>
                      </Form.Group>
-                     <div class="row">
+                     <div className="row">
                             <Form.Group  style={{ maxWidth: '15rem' }}>
                                     <Form.Label>Card number</Form.Label>
                                         <svg {...getCardImageProps({ images })} style={{marginLeft:"7px"}}/>

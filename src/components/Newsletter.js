@@ -1,20 +1,16 @@
-export default function Newsletter(){
+export default function Newsletter() {
 
-    function submit(e){
+    function submit(e) {
         e.preventDefault()
-        document.getElementById("text").value=""
+        document.getElementById("text").value = ""
     }
-    return(
-        <section className="section-newsletter" data-aos="fade-up" data-aos-duration="1500" data-aos-easinf="linear">
-            <div className="newsletter">
-                <div className="newsletter-container">
-                    <p className="newsletter-text">Souscrivez à nos newsletter</p>
-                    <form className="newsletter-form" onSubmit={submit}>
-                        <input type="email" placeholder="example@gmail.com" required id="text"/>
-                        <input type="submit" value="S'abonner" />
-                    </form>
-                </div>
-            </div>
+    return (
+        <section style={{backgroundColor : "rgb(6, 198, 6)" , height : "auto" , minHeight : "250px"}} className="container mt-5 d-flex flex-column align-items-center justify-content-center" data-aos="fade-up" data-aos-duration="1500" data-aos-easinf="linear">
+            <p className="fw-bold text-white newsletter-p">Souscrivez à nos newsletter</p>
+            <form className="newsletter-form" onSubmit={submit}>
+                <input type="email" placeholder="example@gmail.com" required id="text" className="container"/>
+                <input type="submit" value="S'abonner" className="mt-2"/>
+            </form>
         </section>
     )
 }

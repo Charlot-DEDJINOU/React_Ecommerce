@@ -2,7 +2,7 @@ import Product from "./product";
 import Productdata from "./productdata";
 
 const homeproducts=Productdata().filter((f)=>f.id<5).map(produts=>{
-    return <Product {...produts} />
+    return <Product {...produts} key={produts.id}/>
 })
 
 
@@ -13,7 +13,7 @@ export default function HomeProducts(){
              <div className="title">
                 <span></span><h1>Our Products</h1><span></span>
              </div>
-             <div className="products" id="products">
+             <div className="d-flex flex-wrap justify-content-evenly align-items-center" id="products">
                   {homeproducts}
              </div>
         </section>
