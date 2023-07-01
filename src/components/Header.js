@@ -12,7 +12,7 @@ import Badge from "react-bootstrap/Badge"
 import Cart from "./Cart"
 import BuyForm from "./BuyForm"
 import { FaCheck } from "react-icons/fa";
-import logo from "../assets/Logo.png"
+import logo from "../assets/logo.png"
 
 const Span = styled.span`
      text-decoration: none;
