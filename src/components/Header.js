@@ -75,38 +75,39 @@ function BasicExample() {
     }, [isbuy, togglebuy]);
 
     return (
-        <Navbar expand="lg" className="bg-dark-tertiary p-0 fixed-top">
+        <Navbar expand="lg" className="p-0 fixed-top" style={{ backgroundColor : "rgb(6, 198, 6)"}}>
             <Container>
                 <Navbar.Brand>
                     <img src={logo} alt="" width="150px" height="60px" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="me-auto"></Nav>
+                    <Nav>
                         <Nav.Item className="mx-3 my-2">
-                            <NavLink to="/" className="text-black text-decoration-none fw-bold" style={{ fontSize: "1.3em" }}>Home</NavLink>
+                            <NavLink to="/" className="text-white text-decoration-none fw-bold" style={{ fontSize: "1.3em" }}>Home</NavLink>
                         </Nav.Item>
                         <Nav.Item className="mx-3 my-2">
-                            <NavLink to="/Products" className="text-black text-decoration-none fw-bold" style={{ fontSize: "1.3em" }}>All Products</NavLink>
+                            <NavLink to="/Products" className="text-white text-decoration-none fw-bold" style={{ fontSize: "1.3em" }}>All Products</NavLink>
                         </Nav.Item>
                         <Nav.Item className="mx-3 my-2 d-flex">
                             <Badge bg="light" style={{ height: "20px", marginTop: "-1px", marginRight: "-16px", color: "rgb(6, 198, 6)" }}>{totalUniqueItems}</Badge>
                             <button onClick={handleShowCart} style={{ background: "none", border: "none" }}><svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" fill="white" className="bi bi-cart3" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" /></svg></button>
                         </Nav.Item>
                         <Nav.Item className="mx-3 my-2">
-                            <NavLink to="/Contact" className="text-black text-decoration-none fw-bold" style={{ fontSize: "1.3em" }}>Contact</NavLink>
+                            <NavLink to="/Contact" className="text-white text-decoration-none fw-bold" style={{ fontSize: "1.3em" }}>Contact</NavLink>
                         </Nav.Item>
                         <Nav.Item className="mx-3 my-2">{isLogin ?
-                            <span className="text-black text-decoration-none fw-bold" style={{ fontSize: "1.3em" }} to="/">{"Welcome " + user.firstName}</span> :
-                            <NavLink to={isLogin ? "/" : "/Login"} className="text-black text-decoration-none fw-bold" style={{ fontSize: "1.3em" }}>Login</NavLink>}
+                            <span className="text-white text-decoration-none fw-bold" style={{ fontSize: "1.3em" }} to="/">{"Welcome " + user.firstName}</span> :
+                            <NavLink to={isLogin ? "/" : "/Login"} className="text-white text-decoration-none fw-bold" style={{ fontSize: "1.3em" }}>Login</NavLink>}
                         </Nav.Item>
                         <Nav.Item className="mx-3 my-2">{isLogin ?
-                            <Span onClick={() => {
+                            <Span className="text-white" onClick={() => {
                                 localStorage.clear()
                                 toggleLogin()
                                 navigate("/")
                             }}>Logaout</Span> :
-                            <NavLink to="/Register" className="text-black text-decoration-none fw-bold" style={{ fontSize: "1.3em" }}>Register</NavLink>}
+                            <NavLink to="/Register" className="text-white text-decoration-none fw-bold" style={{ fontSize: "1.3em" }}>Register</NavLink>}
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
