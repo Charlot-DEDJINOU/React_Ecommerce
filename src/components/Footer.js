@@ -46,7 +46,15 @@ export default function Footer(){
                               </div>
                         </div>
                 </div>
-                <p className="texte-footer">Copyright@2022 Allright reserved - art-Charlot</p>
+                <p className="texte-footer mb-3">Copyright@2022 Art Charlot Allright reserved</p>
+                <div className="mb-3">
+                  Created by
+                  <a
+                      href="https://charlot-dedjinou.vercel.app"
+                      className="fw-bold text-white text-decoration-none"
+                  >
+                  Charlot DEDJINOU</a>
+                  </div>
          </footer>
     )
 }
