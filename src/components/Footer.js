@@ -47,7 +47,7 @@ export default function Footer(){
                         </div>
                 </div>
                 <p className="texte-footer mb-3">Copyright@2022 Art Charlot Allright reserved</p>
-                <div className="mb-3">
+                <div className="mb-3 mx-2">
                   Created by 
                   <a
                       href="https://charlot-dedjinou.vercel.app"
